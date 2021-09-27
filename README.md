@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to Wthr 👋</h1>
+<h1 align="center">Welcome to wthr 👋</h1>
 
- <p align="center">Weather app for TheOdinProject</p>
+ <p align="center">Weather app for TheOdinProject.</p>
 
 ## Features
 
