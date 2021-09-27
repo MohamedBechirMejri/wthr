@@ -1,58 +1,28 @@
-<h1 align="center">Welcome to website-template 👋</h1>
-<p align="center">
-  <a href="https://www.npmjs.com/package/website-template" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/website-template.svg">
-  </a>
-  <a href="https://github.com/MohamedBechirMejri/website-template#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/MohamedBechirMejri/website-template/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/MohamedBechirMejri/website-template/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/MohamedBechirMejri/website-template" />
-  </a>
-  <a href="https://twitter.com/MohamedBechirMB" target="_blank">
-    <img alt="Twitter: MohamedBechirMB" src="https://img.shields.io/twitter/follow/MohamedBechirMB.svg?style=social" />
-  </a>
-</p>
+<h1 align="center">Welcome to wthr 👋</h1>
 
-> template for your projects so you don't have to do the same configurations everytime you start a new project.
+> weather app for theodinproject
 
-### 🏠 [Homepage](https://github.com/MohamedBechirMejri/website-template#readme)
+## Features
 
-## Install
+- [ ] Show weather based on location (either using search or automatically get your location\*).
 
-```sh
-npm install
-```
+- [ ] Supports Celsius, Fahrenheit and Kelvin.
+- [ ] Hourly Forecast and other data like Wind Speed, Chance of Rain, Humidity...
+- [ ] Beautiful Interface that changes depending on the weather and time of day.
+- [ ] Mobile Support.
 
-## Usage
+## Demo
 
-```sh
-npm run start
-```
+✨ [Wthr](google.com)
 
 ## Author
 
-👤 **MohamedBechirMejri**
+- Github: **[MohamedBechirMejri](https://github.com/MohamedBechirMejri)**
 
-- Twitter: [@MohamedBechirMB](https://twitter.com/MohamedBechirMB)
-- Github: [@MohamedBechirMejri](https://github.com/MohamedBechirMejri)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/MohamedBechirMejri/website-template/issues). You can also take a look at the [contributing guide](https://github.com/MohamedBechirMejri/website-template/blob/master/CONTRIBUTING.md).
-
-## Show your support
+### Show your support
 
 Give a ⭐️ if this project helped you!
 
-## 📝 License
-
-Copyright © 2021 [MohamedBechirMejri <mohamed.bechir.mejri.dev@gmail.com>](https://github.com/MohamedBechirMejri).<br />
-This project is [ISC](https://github.com/MohamedBechirMejri/website-template/blob/master/LICENSE) licensed.
-
 ---
 
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+\*Location permission needs to be granted for this feature to work.
