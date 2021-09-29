@@ -17,9 +17,11 @@ const organizeData = async (location) => {
     const {
         current,
         daily,
-        hourly,
-        minutely
+        hourly
     } = newData;
+    const {
+        country
+    } = city.data[0];
     city = city.data[0].name;
 
     const data = {
@@ -27,7 +29,7 @@ const organizeData = async (location) => {
         current,
         daily,
         hourly,
-        minutely,
+        country,
         city,
     };
 
