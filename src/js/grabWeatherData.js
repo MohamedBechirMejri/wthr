@@ -9,4 +9,10 @@ const grabWeatherData = async (location) => {
   );
   return weatherData.data;
 };
-export { grabWeatherData as default };
+const grabNewData = async (lat, lon) => {
+  const weatherData = await axios.get(
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=c8a1733571c211a516b796af5a8acda7`,
+  );
+  return weatherData.data;
+};
+export { grabNewData, grabWeatherData as default };
