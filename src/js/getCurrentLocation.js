@@ -3,9 +3,10 @@ import grabWeatherData from './grabWeatherData';
 
 const getCurrentLocation = () => {
   navigator.geolocation.getCurrentPosition((result) => {
-    grabWeatherData(result.coords.latitude, result.coords.longitude).catch(
-      console.error,
-    );
+    const lat = result.coords.latitude;
+    const lon = result.coords.longitude;
+
+    grabWeatherData(`lat=${lat}&lon=${lon}`).catch(console.error);
   }, console.error);
 };
 export default getCurrentLocation;
