@@ -1,5 +1,7 @@
+import getCurrentLocation from './js/getCurrentLocation';
+import organizeData from './js/organizeData';
+
 import './main.scss';
 
-import exportFunc from './js/subScript1';
-
-exportFunc();
+getCurrentLocation();
+organizeData('q=tunis')
