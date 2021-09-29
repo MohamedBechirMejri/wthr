@@ -1,2 +1,35 @@
 @use './styles/colors';
 @use './styles/mixins';
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 300ms;
+}
+
+#wrapper {
+    #date {}
+
+    #location {
+        #city {}
+
+        #country {}
+    }
+
+    .temp {
+        #temp {}
+
+        #units {
+            #kelvin {}
+
+            #fahrenheit {}
+
+            #celsius {}
+        }
+    }
+
+    .feels-like {}
+
+    #clouds {}
+
+    #humidity {}
+}
