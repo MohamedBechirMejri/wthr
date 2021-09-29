@@ -1,12 +1,16 @@
-/* eslint-disable no-console */
-import grabWeatherData from './grabWeatherData';
+import organizeData from './organizeData';
 
-const getCurrentLocation = () => {
-  navigator.geolocation.getCurrentPosition((result) => {
-    const lat = result.coords.latitude;
-    const lon = result.coords.longitude;
-
-    grabWeatherData(`lat=${lat}&lon=${lon}`).catch(console.error);
-  }, console.error);
+const getCurrentLocation = async () => {
+  navigator.geolocation.getCurrentPosition(
+    (result) => {
+      const lat = result.coords.latitude;
+      const lon = result.coords.longitude;
+      organizeData(`lat=${lat}&lon=${lon}`);
+    },
+    (err) => {
+      console.error(err);
+    },
+  );
 };
+
 export default getCurrentLocation;
