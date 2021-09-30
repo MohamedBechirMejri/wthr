@@ -2,34 +2,84 @@
 @use './styles/mixins';
 
 * {
-    font-family: 'Courier New', Courier, monospace;
-    transition: all 300ms;
+  font-family: 'Courier New', Courier, monospace;
+  transition: all 300ms;
 }
 
 #wrapper {
-    #date {}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
-    #location {
-        #city {}
+  #date {
+  }
 
-        #country {}
+  #location {
+    #city {
     }
 
+    #country {
+    }
+  }
+  .temp-plus-data {
+      display: flex;
     .temp {
-        #temp {}
+      display: flex;
+      align-items: center;
+      font-size: larger;
 
+      &:hover {
         #units {
-            #kelvin {}
-
-            #fahrenheit {}
-
-            #celsius {}
+          opacity: 1;
+          transform: translate(-0em);
         }
+      }
+
+      #temp {
+      }
+
+      #units {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        opacity: 0;
+        margin-left: 0.5em;
+        transform: translate(-0.5em);
+
+        .unit {
+          border-radius: 0.25em;
+          border-style: solid;
+          border-width: thin;
+          padding-left: 0.2em;
+          padding-right: 0.2em;
+          margin: 0.05em;
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+
+        #kelvin {
+        }
+
+        #fahrenheit {
+        }
+
+        #celsius {
+        }
+      }
     }
 
-    .feels-like {}
+    .feels-like {
+    }
 
-    #clouds {}
+    #clouds {
+    }
 
-    #humidity {}
+    #humidity {
+    }
+  }
 }
