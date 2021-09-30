@@ -7,114 +7,41 @@
   transition: all 300ms;
   text-align: center;
 }
-
 #wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-
-  h1 {
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
   #current-weather {
-    background-color: rgb(255, 164, 16);
-    min-width: 60%;
-    // border-style: solid;
-    border-width: thick;
+    background-color: crimson;
     border-radius: 1em;
     padding: 1em;
+    min-width: 60%;
     margin: auto;
-
-    #date {
-    }
-
-    #location {
-      #city {
+    .waiting {
+      width: 5em;
+      height: 5em;
+      border-style: solid;
+      border-radius: 50%;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      &#one {
+        animation: waiting 1s infinite;
       }
 
-      #country {
-      }
-    }
-
-    .temp-plus-data {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      .temp {
-        display: flex;
-        align-items: center;
-        font-size: larger;
-
-        &:hover {
-          #units {
-            opacity: 1;
-            transform: translate(-0em);
-          }
-        }
-
-        #temp-plus-icon {
-          #icon {
-            margin: -1.25em;
-          }
-          #temp {
-            margin: 0;
-          }
-        }
-
-        #units {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          font-size: large;
-          opacity: 0;
-          margin-left: 0.5em;
-          transform: translate(-0.5em);
-
-          .unit {
-            border-radius: 0.25em;
-            border-style: solid;
-            border-width: thin;
-            padding-left: 0.2em;
-            padding-right: 0.2em;
-            margin: 0.05em;
-
-            &:hover {
-              background-color: black;
-              color: white;
-            }
-          }
-
-          #kelvin {
-          }
-
-          #fahrenheit {
-          }
-
-          #celsius {
-          }
-        }
+      &#two {
+        animation: waiting 1s infinite 500ms;
       }
 
-      .other-data {
-        display: flex;
-        #other-data {
-          .feels-like {
-            margin-right: 1em;
-          }
-
-          #clouds {
-          }
-
-          #humidity {
-          }
-        }
-        #extra-data {
-        }
+      &#three {
+        animation: waiting 1s infinite 300ms;
       }
     }
+  }
+}
+@keyframes waiting {
+  from {
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%);
   }
 }
