@@ -16,16 +16,18 @@
 
   h1 {
     margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   #current-weather {
     background-color: rgb(255, 164, 16);
-    width: fit-content;
     min-width: 60%;
-    border-style: solid;
+    // border-style: solid;
     border-width: thick;
     border-radius: 1em;
     padding: 1em;
+    margin: auto;
 
     #date {
     }
@@ -54,7 +56,13 @@
           }
         }
 
-        #temp {
+        #temp-plus-icon {
+          #icon {
+            margin: -1.25em;
+          }
+          #temp {
+            margin: 0;
+          }
         }
 
         #units {
