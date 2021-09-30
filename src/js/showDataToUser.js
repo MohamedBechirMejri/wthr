@@ -9,7 +9,10 @@ const showDataToUser = (data) => {
         </h3>
         <div class="temp-plus-data">
           <div class="temp">
+          <div id="temp-plus-icon">
+          <img id="icon" src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"></img>
             <h2 id="temp" class="temp-value">${data.main.temp}°K</h2>
+            </div>
             <div id="units">
               <span id="kelvin" class="unit">K</span>
               <span id="fahrenheit" class="unit">F</span>
