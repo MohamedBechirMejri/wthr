@@ -41,11 +41,11 @@ const grabWeatherData = async (location) => {
     },
     visibility: 10000,
   };
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+  await new Promise((resolve) => setTimeout(resolve, 10000));
 
   // return weatherData.data;
     return weatherData;
-    
+
 };
 const grabNewData = async (lat, lon) => {
   const weatherData = await axios.get(
