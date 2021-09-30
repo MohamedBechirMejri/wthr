@@ -1,5 +1,5 @@
 @use './styles/colors';
-@use './styles/mixins';
+@use './styles/animations';
 
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -15,7 +15,7 @@
     #current-weather {
         background-color: crimson;
         border-radius: 1em;
-    //    padding: 1em;
+        //    padding: 1em;
         min-width: 60%;
         margin: auto;
         position: relative;
@@ -42,14 +42,7 @@
                 animation: waiting 1s infinite 300ms;
             }
         }
-    }
-}
 
-@keyframes waiting {
-    from {}
 
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%);
     }
 }
