@@ -9,15 +9,15 @@
     transform: translate(-50%, -50%) scale(0);
     transition: none;
 
-    &#one {
+    &.one {
         animation: waiting 1s infinite;
     }
 
-    &#two {
+    &.two {
         animation: waiting 1s infinite 500ms;
     }
 
-    &#three {
+    &.three {
         animation: waiting 1s infinite 300ms;
     }
 }
