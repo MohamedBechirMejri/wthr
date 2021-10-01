@@ -34,6 +34,23 @@ const showDataToUser = (data) => {
           <h4 class="clouds">${data.weather[0].description}</h4>
         </div>
                                 `;
+  const dailyDiv = document.getElementById('daily-data');
+  dailyDiv.innerHTML = ``;
+
+  data.daily.forEach((day) => {
+    const dayDiv = document.createElement('div');
+    dayDiv.classList.add('day');
+    dayDiv.innerHTML = `
+        <img
+            src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
+            alt="weather icon"
+            class="icon"
+            />
+        <h4 class="hi temp-value">${day.temp.max}°K</h4>
+        <h4 class="lo temp-value">${day.temp.min}°K</h4>
+    `;
+    dailyDiv.appendChild(dayDiv);
+  });
   // eslint-disable-next-line no-console
   console.log(data);
 };
