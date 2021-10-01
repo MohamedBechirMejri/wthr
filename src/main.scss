@@ -107,14 +107,14 @@
         position: relative;
 
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
 
         text-transform: capitalize;
 
         .current-weather {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-evenly;
 
             .main {
@@ -150,6 +150,18 @@
                         }
                     }
                 }
+            }
+
+            .other-data {
+                p {
+                    margin: 0;
+                }
+            }
+        }
+        .time-place {
+            margin: 1em;
+            h3,h4 {
+                margin: 0;
             }
         }
     }
