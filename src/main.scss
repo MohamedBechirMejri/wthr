@@ -2,10 +2,10 @@
 @use './styles/animations';
 
 * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition: all 300ms;
-    // text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: all 300ms;
+  // text-align: center;
 }
 
 /*
@@ -95,84 +95,101 @@
 }
 */
 #wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  #weather-widget {
+    background-color: darkorange;
+    border-radius: 1em;
+    min-width: 60%;
+    position: relative;
+
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
 
-    #weather-widget {
-        background-color: darkorange;
-        border-radius: 1em;
-        min-width: 60%;
-        position: relative;
+    text-transform: capitalize;
 
+    .current-weather {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .main {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        margin-right: 1em;
 
-        text-transform: capitalize;
-
-        .current-weather {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-
-            .main {
-                display: flex;
-                align-items: center;
-                margin-right: 1em;
-
-                .icon {
-                    margin-right: -1.5em;
-                }
-
-                .temp {
-                    position: relative;
-
-                    &:hover {
-                        #units {
-                            opacity: 1;
-                            top: 3.5em;
-                        }
-                    }
-
-                    #units {
-                        position: absolute;
-                        left: 1em;
-                        top: 3em;
-                        opacity: 0;
-
-                        .unit {
-                            background-color: white;
-                            border-color: black;
-                            border-style: solid;
-                            border-radius: 1em;
-                            font-weight: bold;
-
-                            &:hover {
-                                background-color: black;
-                                color: white;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .other-data {
-                p {
-                    margin: 0;
-                }
-            }
+        .icon {
+          margin-right: -1.5em;
         }
 
-        .time-place {
-            margin: 1em;
+        .temp {
+          position: relative;
 
-            h3,
-            h4 {
-                margin: 0;
+          &:hover {
+            #units {
+              opacity: 1;
+              top: 3.5em;
             }
+          }
+
+          #units {
+            position: absolute;
+            left: 1em;
+            top: 3em;
+            opacity: 0;
+
+            .unit {
+              background-color: white;
+              border-color: black;
+              border-style: solid;
+              border-radius: 1em;
+              font-weight: bold;
+
+              &:hover {
+                background-color: black;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      .other-data {
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .time-place {
+      margin: 1em;
+
+      h3,
+      h4 {
+        margin: 0;
+      }
+    }
+  }
+  #daily-data {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+    border-radius: 1em;
+    z-index: -1;
+    margin-top: -1em;
+    padding: 1em;
+    .day {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h4 {
+            margin: 0;
         }
     }
+  }
 }
