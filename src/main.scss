@@ -111,5 +111,29 @@
         align-items: center;
 
         text-transform: capitalize;
+
+        .current-weather {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+
+            .main {
+                display: flex;
+                align-items: center;
+                margin-right: 1em;
+
+                .icon {
+                    margin-right: -2em;
+                }
+
+                .temp {
+                    position: relative;
+
+                    #units {
+                        position: absolute;
+                    }
+                }
+            }
+        }
     }
 }
