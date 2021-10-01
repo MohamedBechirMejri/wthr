@@ -129,8 +129,23 @@
                 .temp {
                     position: relative;
 
+                    &:hover {
+                        #units {
+                            opacity: 1;
+                        }
+                    }
+
                     #units {
                         position: absolute;
+                        opacity: 0;
+
+                        .unit {
+                            background-color: white;
+                            border-color: black;
+                            border-style: solid;
+                            border-radius: 1em;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
