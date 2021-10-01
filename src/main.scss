@@ -147,6 +147,11 @@
                             border-style: solid;
                             border-radius: 1em;
                             font-weight: bold;
+
+                            &:hover {
+                                background-color: black;
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -158,9 +163,12 @@
                 }
             }
         }
+
         .time-place {
             margin: 1em;
-            h3,h4 {
+
+            h3,
+            h4 {
                 margin: 0;
             }
         }
