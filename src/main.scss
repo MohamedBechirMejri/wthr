@@ -98,5 +98,13 @@
   flex-direction: column;
   flex-wrap: nowrap;
 
-  
+  #weather-widget {
+    background-color: crimson;
+    border-radius: 1em;
+    min-width: 60%;
+    margin: auto;
+    position: relative;
+
+
+  }
 }
