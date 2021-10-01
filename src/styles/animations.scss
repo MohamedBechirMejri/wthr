@@ -7,7 +7,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0);
-
+  transition: none;
   &#one {
     animation: waiting 1s infinite;
   }
