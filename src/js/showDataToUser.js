@@ -1,46 +1,35 @@
 const showDataToUser = (data) => {
-  const currentWeather = document.getElementById('current-weather');
+  const currentWeather = document.getElementById('weather-widget');
 
   currentWeather.innerHTML = `
-        <div class="temp">
+        <div class="current-weather">
           <img
-            id="icon"
             src="http://openweathermap.org/img/wn/${
               data.weather[0].icon
             }@2x.png"
+            alt="weather icon"
+            class="icon"
           />
-          <h2 id="temp" class="temp-value">${data.main.temp}°K</h2>
-          <div id="units">
-            <button id="kelvin" class="unit">K</button>
-            <button id="fahrenheit" class="unit">F</button>
-            <button id="celsius" class="unit">C</button>
+          <div class="temp">
+            <h2 id="temp" class="temp-value">${data.main.temp}°K</h2>
+            <div id="units">
+              <button class="unit" id="kelvin">K</button>
+              <button class="unit" id="fahrenheit">F</button>
+              <button class="unit" id="celsius">C</button>
+            </div>
+          </div>
+          <div class="other-data">
+            <p class="feels-like ">feels like: <span class="temp-value">${
+              data.main.feels_like
+            }°K</span></p>
+            <p class="humidity">humidity: ${data.main.humidity}</p>
+            <p class="wind">${(data.wind.speed * 3.6).toFixed()}km/h</p>
           </div>
         </div>
-        <div id="place-and-time">
-        <p id="date">${new Date().toLocaleString()}</p>
-        <h3 id="location">
-          <span id="city">${data.name}</span>,
-          <span id="country">${data.sys.country}</span>
-        </h3>
-        </div>
-        <div id="other-extra">
-          <div id="other-data">
-            <h4 class="feels-like">
-              feels like:
-              <span id="feels-like" class="temp-value"
-                >${data.main.feels_like}°K</span
-              >
-            </h4>
-            <h4 id="clouds">${data.weather[0].description}</h4>
-            <h4 class="humidity">
-              humidity: <span id="humidity">${data.main.humidity}</span>%
-            </h4>
-          </div>
-          <div id="extra-data">
-            <h4 id="wind">${(data.wind.speed * 3.6).toFixed()}km/h</h4>
-            <h4 id="visibility">${(data.visibility / 1000).toFixed(1)}km</h4>
-            <h4 id="pressure">${data.main.pressure}hPa</h4>
-          </div>
+        <div class="time-place">
+          <h3 class="location">${data.name}, ${data.sys.country}</h3>
+          <h4 class="date">${new Date().toLocaleString()}</h4>
+          <h4 class="clouds">${data.weather[0].description}</h4>
         </div>
                                 `;
   // eslint-disable-next-line no-console
