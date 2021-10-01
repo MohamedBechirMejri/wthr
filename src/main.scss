@@ -132,11 +132,13 @@
                     &:hover {
                         #units {
                             opacity: 1;
+                            top: 4em;
                         }
                     }
 
                     #units {
                         position: absolute;
+                        top: 3em;
                         opacity: 0;
 
                         .unit {
