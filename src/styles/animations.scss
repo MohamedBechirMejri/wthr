@@ -1,8 +1,33 @@
-@keyframes waiting {
-    from {}
+.waiting {
+  width: 5em;
+  height: 5em;
+  border-style: solid;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
 
-    to {
-        opacity: 0;
-        transform: translate(-50%, -50%);
-    }
+  &#one {
+    animation: waiting 1s infinite;
+  }
+
+  &#two {
+    animation: waiting 1s infinite 500ms;
+  }
+
+  &#three {
+    animation: waiting 1s infinite 300ms;
+  }
+}
+
+@keyframes waiting {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
 }
