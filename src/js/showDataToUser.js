@@ -3,19 +3,21 @@ const showDataToUser = (data) => {
 
   currentWeather.innerHTML = `
         <div class="current-weather">
-          <img
+          <div class="main">
+            <img
             src="http://openweathermap.org/img/wn/${
               data.weather[0].icon
             }@2x.png"
             alt="weather icon"
             class="icon"
-          />
-          <div class="temp">
-            <h2 id="temp" class="temp-value">${data.main.temp}°K</h2>
-            <div id="units">
-              <button class="unit" id="kelvin">K</button>
-              <button class="unit" id="fahrenheit">F</button>
-              <button class="unit" id="celsius">C</button>
+            />
+            <div class="temp">
+              <h2 id="temp" class="temp-value">${data.main.temp}°K</h2>
+              <div id="units">
+                <button class="unit" id="kelvin">K</button>
+                <button class="unit" id="fahrenheit">F</button>
+                <button class="unit" id="celsius">C</button>
+              </div>
             </div>
           </div>
           <div class="other-data">
