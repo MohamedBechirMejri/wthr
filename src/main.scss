@@ -119,6 +119,7 @@ body {
     margin-top: 5em;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 
     form {
       @extend .request-data;
