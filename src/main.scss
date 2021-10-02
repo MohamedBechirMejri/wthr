@@ -200,14 +200,15 @@ body {
 
   .request-data {
     display: flex;
-    flex-direction: column;
-    margin-top: 5em;
+//    flex-direction: column;
+    margin-top: 10em;
     justify-content: space-evenly;
     align-items: center;
 
     form {
       @extend .request-data;
-      margin: auto;
+      margin: 1em;
+    //  flex-direction: row;
 
       input {
         font-size: x-large;
@@ -234,7 +235,7 @@ body {
       padding: 0.25em;
     }
     span {
-      color: white;
+      color: black;
       font-size: x-large;
       font-weight: bold;
     }
