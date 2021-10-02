@@ -36,7 +36,7 @@ const showDataToUser = (data) => {
                                 `;
   const dailyDiv = document.getElementById('daily-data');
   dailyDiv.innerHTML = ``;
-
+  dailyDiv.style.padding = '1em';
   data.daily.forEach((day) => {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('day');
