@@ -1,3 +1,5 @@
+import listen from './eventListeners';
+
 const showDataToUser = (data) => {
   const currentWeather = document.getElementById('weather-widget');
 
@@ -51,6 +53,7 @@ const showDataToUser = (data) => {
     `;
     dailyDiv.appendChild(dayDiv);
   });
+  listen();
   // eslint-disable-next-line no-console
   console.log(data);
 };
