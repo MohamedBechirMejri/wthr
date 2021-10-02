@@ -1,4 +1,4 @@
-import getCurrentLocation from './js/getCurrentLocation';
+import listen from './js/eventListeners';
 import './main.scss';
 
-getCurrentLocation();
+listen();
