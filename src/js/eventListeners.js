@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import getCurrentLocation from './getCurrentLocation';
 import organizeData from './organizeData';
 
@@ -17,9 +18,23 @@ const listenToSearchButton = () => {
   });
 };
 
+const listenToUnitButtons = () => {
+  const units = document.querySelectorAll('.unit');
+  const tempValues = document.querySelectorAll('.temp-value');
+
+  units.forEach((unit) => {
+    unit.addEventListener('click', () => {
+      tempValues.forEach((value) => {
+        value.innerHTML = 'test';
+      });
+    });
+  });
+};
+
 const listen = () => {
   listenToLocateButton();
   listenToSearchButton();
+  listenToUnitButtons();
 };
 
 export default listen;
