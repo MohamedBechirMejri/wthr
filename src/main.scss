@@ -8,7 +8,7 @@
   // text-align: center;
 }
 body {
-    background-color: black;
+  //  background-color: black;
 }
 /*
 #wrapper {
@@ -213,22 +213,30 @@ body {
         font-size: x-large;
         text-align: center;
         outline: none;
-        border-radius: 0.25em;
+        border-radius: 0.5em;
         border-style: solid;
         border-color: black;
-        background-color: darkorange;
         color: black;
+        padding: 0.25em;
         &::placeholder {
-            color: black;
+          color: black;
         }
       }
-      button {
-          margin: 1em;
-          border-style: solid;
-          border-color: black;
-          border-radius: 0.5em;
-          background-color: darkorange;
-      }
+    }
+    button {
+      margin: 1em;
+      border-style: solid;
+      border-color: black;
+      border-radius: 0.5em;
+      background-color: white;
+      font-size: x-large;
+      font-weight: bold;
+      padding: 0.25em;
+    }
+    span {
+      color: white;
+      font-size: x-large;
+      font-weight: bold;
     }
   }
 }
