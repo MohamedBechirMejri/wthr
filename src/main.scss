@@ -120,7 +120,15 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-
+    .temp-div {
+      @extend .request-data;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      margin: 0;
+    }
     form {
       @extend .request-data;
       margin: 1em;
