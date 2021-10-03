@@ -51,16 +51,17 @@ body {
           &:hover {
             #units {
               opacity: 1;
-              top: 3.5em;
+              transform: scale(1.1);
             }
           }
 
           #units {
             position: absolute;
-            left: 1em;
-            top: 3em;
+            left: 16em;
+            top: 1.85em;
             opacity: 0;
             transition: all 300ms;
+            display: flex;
 
             .unit {
               background-color: white;
@@ -68,6 +69,7 @@ body {
               border-style: solid;
               border-radius: 1em;
               font-weight: bold;
+              margin-left: 0.5em;
 
               &:hover {
                 background-color: black;
