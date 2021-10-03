@@ -12,7 +12,7 @@
 
 ## Demo
 
-✨ [Wthr](google.com)
+✨ [Wthr](https://mohamedbechirmejri.github.io/wthr/)
 
 ## Author
 
