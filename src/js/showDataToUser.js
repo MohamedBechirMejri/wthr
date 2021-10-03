@@ -5,7 +5,7 @@ const showDataToUser = (data) => {
   const currentWeather = document.getElementById('weather-widget');
 
   currentWeather.innerHTML = `
-        <div class="current-weather">
+        <div class="current-weather reveal">
           <div class="main">
             <img
             src="http://openweathermap.org/img/wn/${
@@ -23,7 +23,7 @@ const showDataToUser = (data) => {
               </div>
             </div>
           </div>
-          <div class="other-data">
+          <div class="other-data reveal">
             <p class="feels-like ">feels like: <span class="temp-value">${
               data.main.feels_like
             }°K</span></p>
@@ -31,7 +31,7 @@ const showDataToUser = (data) => {
             <p class="wind">${(data.wind.speed * 3.6).toFixed()}km/h</p>
           </div>
         </div>
-        <div class="time-place">
+        <div class="time-place reveal">
           <h3 class="location">${data.name}, ${data.sys.country}</h3>
           <h4 class="date">${new Date().toLocaleString()}</h4>
           <h4 class="clouds">${data.weather[0].description}</h4>
@@ -42,7 +42,8 @@ const showDataToUser = (data) => {
   dailyDiv.style.padding = '1em';
   data.daily.forEach((day) => {
     const dayDiv = document.createElement('div');
-    dayDiv.classList.add('day');
+      dayDiv.classList.add('day');
+      dayDiv.style.opacity = `0`
     dayDiv.innerHTML = `
         <img
             src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
@@ -53,8 +54,9 @@ const showDataToUser = (data) => {
         <h4 class="lo temp-value">${day.temp.min}°K</h4>
     `;
     dailyDiv.appendChild(dayDiv);
+    setTimeout(() => dayDiv.classList.add('reveal'), data.daily.indexOf(day) * 50);
   });
-
+document.querySelector('.request-data').classList.remove('reveal');
   document.querySelector('.request-data').innerHTML = `
         <button id="auto-locate" class="button">Locate Me!</button>
         <span>OR</span>
@@ -62,8 +64,7 @@ const showDataToUser = (data) => {
           <input type="text" id="search" placeholder="Enter City" />
           <div id="submit" class="button">Search</div>
         </form>`;
-    
-  listen();
+        listen();
   // eslint-disable-next-line no-console
   console.log(data);
 };

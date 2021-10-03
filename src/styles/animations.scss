@@ -45,3 +45,16 @@
   100% {
   }
 }
+
+.reveal {
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
