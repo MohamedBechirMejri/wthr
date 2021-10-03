@@ -4,12 +4,11 @@
 
 ## Features
 
-- [ ] Show weather based on location (either using search or automatically get your location\*).
-
-- [ ] Supports Celsius, Fahrenheit and Kelvin.
-- [ ] Hourly Forecast and other data like Wind Speed, Chance of Rain, Humidity...
-- [ ] Beautiful Interface that changes depending on the weather and time of day.
-- [ ] Mobile Support.
+- [x] Show weather based on location (either using search or automatically get your location\*).
+- [x] Supports Celsius, Fahrenheit and Kelvin.
+- [x] Daily Forecast and other data like Wind Speed, Humidity...
+- [x] Beautiful Icons that change depending on the weather.
+- [Meh] Mobile Support.
 
 ## Demo
 
