@@ -54,6 +54,15 @@ const showDataToUser = (data) => {
     `;
     dailyDiv.appendChild(dayDiv);
   });
+
+  document.querySelector('.request-data').innerHTML = `
+        <button id="auto-locate" class="button">Locate Me!</button>
+        <span>OR</span>
+        <form>
+          <input type="text" id="search" placeholder="Enter City" />
+          <div id="submit" class="button">Search</div>
+        </form>`;
+    
   listen();
   // eslint-disable-next-line no-console
   console.log(data);
