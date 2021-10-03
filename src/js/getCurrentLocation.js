@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import organizeData from './organizeData';
 
 const getCurrentLocation = async () => {
