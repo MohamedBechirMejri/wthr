@@ -176,3 +176,21 @@ body {
     }
   }
 }
+footer {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translate(-50%);
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.1em;
+    border-radius: 0.25em;
+    transition: all 300ms;
+    &:hover {
+      color: antiquewhite;
+      background-color: black;
+    }
+  }
+}
