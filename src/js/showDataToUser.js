@@ -27,7 +27,7 @@ const showDataToUser = (data) => {
             <p class="feels-like ">feels like: <span class="temp-value">${
               data.main.feels_like
             }°K</span></p>
-            <p class="humidity">humidity: ${data.main.humidity}</p>
+            <p class="humidity">humidity: ${data.main.humidity}%</p>
             <p class="wind">${(data.wind.speed * 3.6).toFixed()}km/h</p>
           </div>
         </div>
