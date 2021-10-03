@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+import convertUnit from './convertUnit';
 import getCurrentLocation from './getCurrentLocation';
 import organizeData from './organizeData';
 
@@ -25,7 +26,10 @@ const listenToUnitButtons = () => {
   units.forEach((unit) => {
     unit.addEventListener('click', () => {
       tempValues.forEach((value) => {
-        value.innerHTML = 'test';
+        let init = value.innerText.split('°');
+        init = convertUnit(init[0], init[1], unit.innerText);
+
+        value.innerText = init;
       });
     });
   });
