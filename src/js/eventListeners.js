@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 /* eslint-disable no-param-reassign */
 import convertUnit from './convertUnit';
 import getCurrentLocation from './getCurrentLocation';

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import grabWeatherData, { grabNewData } from './grabWeatherData';
 import showDataToUser from './showDataToUser';
 

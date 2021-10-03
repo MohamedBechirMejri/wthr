@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import listen from './eventListeners';
 
 const showDataToUser = (data) => {
