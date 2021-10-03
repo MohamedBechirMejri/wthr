@@ -58,3 +58,14 @@
         opacity: 1;
     }
 }
+input:focus {
+    animation: focused 1s infinite alternate;
+}
+@keyframes focused {
+    from {
+
+    }
+    to{
+        box-shadow: 0 0 0 0.1em
+    }
+}
