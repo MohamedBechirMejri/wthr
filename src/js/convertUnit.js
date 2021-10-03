@@ -12,7 +12,7 @@ const convertUnit = (value, from, to) => {
       : '';
   } else if (from === 'C') {
     to === 'K'
-      ? (value = (value + 273.15).toFixed(0))
+      ? (value = (value + 273.15).toFixed(2))
       : to === 'F'
       ? (value = ((value * 9) / 5 + 32).toFixed(0))
       : '';
@@ -20,7 +20,7 @@ const convertUnit = (value, from, to) => {
     to === 'C'
       ? (value = (((value - 32) * 5) / 9).toFixed(0))
       : to === 'K'
-      ? (value = (((value - 32) * 5) / 9 + 273.15).toFixed(0))
+      ? (value = (((value - 32) * 5) / 9 + 273.15).toFixed(2))
       : '';
   }
   return `${value}°${to}`;
