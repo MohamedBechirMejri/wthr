@@ -25,3 +25,4 @@ Give a ⭐️ if this project helped you!
 ---
 
 \*Location permission needs to be granted for this feature to work.
+ 
